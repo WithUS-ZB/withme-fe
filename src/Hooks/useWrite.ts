@@ -6,9 +6,11 @@ const useWrite = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem('accessToken');
   const URL = import.meta.env.VITE_SERVER_URL;
+
   const [targetId, setTargetId] = useState<string>('');
   const [isEdit, setIsEdit] = useState<boolean>(false);
 
+  /** 게시글 작성 */
   const addPost = async (data: any) => {
     try {
       await axios
@@ -51,6 +53,7 @@ const useWrite = () => {
     }
   };
 
+  /** 게시글 삭제 */
   const RemovePost = async (id: number) => {
     try {
       await axios
@@ -66,7 +69,10 @@ const useWrite = () => {
     }
   };
 
+  /** 게시글 수정 이동 */
   const goEdit = (id: any) => {
+    console.log('업데이트 전 -', targetId, '-', isEdit);
+
     setTargetId(id);
     setIsEdit(true);
     navigate('/write');

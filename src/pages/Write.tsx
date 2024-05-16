@@ -33,7 +33,7 @@ interface IForm {
 export default function Write() {
   const { addPost, targetId, isEdit } = useWrite();
 
-  console.log('타겟 : ', targetId, '수정 여부 : ', isEdit);
+  console.log('타겟 게시글 아이디 :', targetId, '게시글 수정 상태 :', isEdit);
 
   const {
     register,
@@ -192,9 +192,8 @@ export default function Write() {
     if (isEdit) {
       getTargetData();
     }
+    console.log('업데이트 후-', targetId, '-', isEdit);
   }, [isEdit, targetId]);
-
-  console.log('targetId : ', targetId);
 
   return (
     <main className="py-5 font-['TAEBAEKmilkyway'] shadow-xl p-5 mb-5 mt-5 rounded-2xl dark:bg-gray-600">
