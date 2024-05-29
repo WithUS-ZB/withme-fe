@@ -1,6 +1,8 @@
 import { SiNotion } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 
+// for commit
+
 export default function Footer() {
   return (
     <footer className="bg-brand_2 flex justify-center items-center py-4 gap-8 font-sans">
