@@ -73,7 +73,5 @@
 
 
 
-  
-![3040 jpg_wh860](https://github.com/WithUS-ZB/withme-fe/assets/148526219/29eaca99-5362-4a9f-a36f-14e522ee6cf3)
 </div>  
 
